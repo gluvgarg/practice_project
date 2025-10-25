@@ -1,0 +1,89 @@
+ /* Reset and global styles */
+* {  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Body centered layout */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ece7e7;
+}
+
+/* Main joke box container */
+.joke-container {
+    background-color: #ffffff;
+    width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 128, 0, 0.3);
+    text-align: center;
+}
+
+/* Title */
+.joke-container h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: rgb(108, 108, 183);
+    margin-bottom: 10px;
+}
+
+/* Button styling */
+.jokebtn {
+    display: block;
+    margin: 20px auto 10px;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(8, 186, 236);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.jokebtn:hover {
+    background-color: darkblue;
+    transform: scale(1.05);
+}
+
+/* Joke display area */
+.jokes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    margin-top: 15px;
+    overflow-y: auto;       /* allows scroll for long jokes */
+    padding: 5px;
+}
+
+/* Joke text */
+.joke {
+    background-color: #ece7e7;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: brown;
+    line-height: 1.4;
+
+    /* prevents overflow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-line;
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Optional fade effect for new jokes */
+.joke.fade {
+    opacity: 0;
+}
